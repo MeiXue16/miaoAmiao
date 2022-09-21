@@ -1,7 +1,7 @@
 <template>
   <div id="indexPage">
     <h1>喵了个喵ฅʕ•̫͡•ʔฅ</h1>
-    <div style="margin-bottom: 16px">改编自鱼了个鱼</div>
+    <div style="margin-bottom: 32px">改编自鱼了个鱼</div>
     <!-- <a-button
       block
       style="margin-bottom: 16px"
@@ -25,11 +25,12 @@
     <!-- </a-button> -->
     <a-button
       block
-      style="margin-bottom: 16px"
+      style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;"
       @click="toGamePage(lunaticGameConfig)"
     >
       地狱模式
     </a-button>
+	<br />
     <!-- <a-button
       block
       style="margin-bottom: 16px"
@@ -39,12 +40,13 @@
     </a-button> -->
     <a-button
       block
-      style="margin-bottom: 16px"
+      style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;"
       @click="toGamePage(yangGameConfig)"
     >
       羊了个羊模式
     </a-button>
-    <a-button block style="margin-bottom: 16px" @click="() => toGamePage()">
+	<br />
+    <a-button block style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;" @click="() => toGamePage()">
       自定义 🔥
     </a-button>
     <my-ad />
