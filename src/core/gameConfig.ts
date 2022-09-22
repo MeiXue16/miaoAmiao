@@ -190,13 +190,13 @@ export const yangGameConfig: GameConfigType = {
   // 需要多少个一样块的才能合成
   composeNum: 3,
   // 动物类别数
-  typeNum: 16,
+  typeNum: 12,
   // 每层块数（大致）
-  levelBlockNum: 24,
+  levelBlockNum: 30,
   // 边界收缩步长
   borderStep: 1,
   // 总层数（最小为 2）
-  levelNum: 9,
+  levelNum: 6,
   // 随机区块数（数组长度代表随机区数量，值表示每个随机区生产多少块）
   randomBlocks: [8, 8],
   // 动物数组
