@@ -50,6 +50,7 @@
         >
           {{ randomBlock[0].type }}
         </div>
+
         <!-- 隐藏 -->
         <div
           v-for="num in Math.max(randomBlock.length - 1, 0)"
@@ -62,6 +63,7 @@
         </div>
       </div>
     </a-row>
+
     <!-- 槽位 -->
     <a-row v-if="slotAreaVal.length > 0" align="center" class="slot-board">
       <div v-for="(slotBlock, index) in slotAreaVal" :key="index" class="block">
@@ -142,6 +144,8 @@ onMounted(() => {
 .random-area {
   margin-top: 8px;
   border-radius: 5px;
+  margin: 10px 0px;
+  padding: 2px 70px;
 }
 
 .slot-board {
@@ -154,6 +158,8 @@ onMounted(() => {
 .skill-board {
   text-align: center;
   border-radius: 5px;
+  padding: 2px 15px;
+  font: 2em;
 }
 
 .block {
