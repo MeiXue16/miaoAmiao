@@ -145,7 +145,7 @@ onMounted(() => {
   margin-top: 8px;
   border-radius: 5px;
   margin: 10px 0px;
-  padding: 2px 70px;
+  padding: 5px 2px;
 }
 
 .slot-board {
