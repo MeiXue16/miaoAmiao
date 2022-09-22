@@ -42,7 +42,7 @@ const useGame = () => {
   const heightUnit = 14;
 
   // 保存整个 "棋盘" 的每个格子状态（下标为格子起始点横纵坐标）
-  let chessBoard: ChessBoardUnitType[][][] = [];
+  let chessBoard: ChessBoardUnitType[][] = [];
 
   // 操作历史（存储点击的块）
   let opHistory: BlockType[] = [];
@@ -67,7 +67,7 @@ const useGame = () => {
       for (let j = 0; j < height; j++) {
 			chessBoard[i][j] = {
 			  blocks: [],
-		  };
+			};
       }
     }
   };
