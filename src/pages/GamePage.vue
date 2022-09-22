@@ -8,7 +8,7 @@
     <a-row align="center">
       <div v-if="gameStatus === 3" style="text-align: center">
         <h2>恭喜，你赢啦！🎉</h2>
-        <!-- <img alt="" src="../assets/kunkun.png" /> -->
+        <img alt="" src="../assets/kunkun.gif" />
         <!-- <my-ad style="margin-top: 16px" /> -->
       </div>
     </a-row>
@@ -126,28 +126,34 @@ onMounted(() => {
 <style scoped>
 .level-board {
   position: relative;
+  border-radius: 5px;
 }
 
 .level-block {
   position: absolute;
+  border-radius: 5px;
 }
 
 .random-board {
   margin-top: 8px;
+  border-radius: 5px;
 }
 
 .random-area {
   margin-top: 8px;
+  border-radius: 5px;
 }
 
 .slot-board {
   border: 10px solid hsl(196, 51%, 70%);
   margin: 16px auto;
   width: fit-content;
+  border-radius: 5px;
 }
 
 .skill-board {
   text-align: center;
+  border-radius: 5px;
 }
 
 .block {
@@ -162,6 +168,7 @@ onMounted(() => {
   background: hsl(0, 8%, 94%);
   text-align: center;
   vertical-align: top;
+  border-radius: 5px;
   display: inline-block;
 }
 
