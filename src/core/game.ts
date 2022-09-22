@@ -42,7 +42,7 @@ const useGame = () => {
   const heightUnit = 14;
 
   // 保存整个 "棋盘" 的每个格子状态（下标为格子起始点横纵坐标）
-  let chessBoard: ChessBoardUnitType[][] = [];
+  let chessBoard: ChessBoardUnitType[][][] = [];
 
   // 操作历史（存储点击的块）
   let opHistory: BlockType[] = [];
@@ -65,9 +65,9 @@ const useGame = () => {
     for (let i = 0; i < width; i++) {
       chessBoard[i] = new Array(height);
       for (let j = 0; j < height; j++) {
-        chessBoard[i][j] = {
-          blocks: [],
-        };
+			chessBoard[i][j] = {
+			  blocks: [],
+		  };
       }
     }
   };
@@ -231,8 +231,8 @@ const useGame = () => {
       let newPosY;
       let key;
       while (true) {
-        newPosX = Math.floor(Math.random() * (maxX + minX));
-        newPosY = Math.floor(Math.random() * maxY + minY);
+        newPosX = Math.floor(Math.random() * maxX );
+        newPosY = Math.floor(Math.random() * maxY);
         key = newPosX + "," + newPosY;
         // 同批次元素不能完全重叠
         if (!currentPosSet.has(key)) {

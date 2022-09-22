@@ -148,7 +148,7 @@ onMounted(() => {
   border: 10px solid hsl(196, 51%, 70%);
   margin: 16px auto;
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .skill-board {
@@ -161,11 +161,11 @@ onMounted(() => {
   width: 42px;
   height: 42px;
   line-height: 42px;
-  border: 0.5px hsl(194, 0%, 30%);
+  border: 1px hsl(194, 0%, 30%);
   /* transform: translate(0, -15%) rotate(-4deg); */
   /* transform-origin: center center; */
   box-shadow: 2px 2px 2px 2px hsl(130, 30%, 72%);
-  background: hsl(0, 8%, 94%);
+  background: hsl(20, 30%, 94%);
   text-align: center;
   vertical-align: top;
   border-radius: 5px;
@@ -173,7 +173,7 @@ onMounted(() => {
 }
 
 .disabled {
-  background: hsl(204, 8%, 70%);
+  background: #d0cec8;
   cursor: not-allowed;
 }
 </style>
