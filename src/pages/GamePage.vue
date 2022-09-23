@@ -18,7 +18,7 @@
         <div v-for="(block, idx) in levelBlocksVal" :key="idx">
           <div
             v-if="block.status === 0"
-            class="block level-block"
+            class="block block-1 level-block"
             :class="{
               disabled: !isHolyLight && block.lowerThanBlocks.length > 0,
             }"
@@ -42,24 +42,24 @@
         :key="index"
         class="random-area"
       >
-        <div
-          v-if="randomBlock.length > 0"
-          :data-id="randomBlock[0].id"
-          class="block"
-          @click="() => doClickBlock(randomBlock[0], index)"
-        >
-          {{ randomBlock[0].type }}
-        </div>
-
         <!-- 隐藏 -->
         <div
           v-for="num in Math.max(randomBlock.length - 1, 0)"
           :key="num"
-          class="block disabled"
+          class="block block-2 disabled"
         >
           <span v-if="canSeeRandom">
             {{ randomBlock[num].type }}
           </span>
+        </div>
+
+        <div
+          v-if="randomBlock.length > 0"
+          :data-id="randomBlock[0].id"
+          class="block block-2"
+          @click="() => doClickBlock(randomBlock[0], index)"
+        >
+          {{ randomBlock[0].type }}
         </div>
       </div>
     </a-row>
@@ -129,6 +129,8 @@ onMounted(() => {
 .level-board {
   position: relative;
   border-radius: 5px;
+  margin: 0 calc(50% - 184px);
+  width: 100%;
 }
 
 .level-block {
@@ -137,6 +139,7 @@ onMounted(() => {
 }
 
 .random-board {
+  margin: 0 calc(50% - 184px);
   margin-top: 8px;
   border-radius: 5px;
 }
@@ -149,8 +152,9 @@ onMounted(() => {
 }
 
 .slot-board {
+  /* margin-top: 24px; */
   border: 10px solid hsl(196, 51%, 70%);
-  margin: 16px auto;
+  margin: 0 calc(50% - 160px);
   width: fit-content;
   border-radius: 10px;
 }
@@ -176,6 +180,17 @@ onMounted(() => {
   vertical-align: top;
   border-radius: 5px;
   display: inline-block;
+}
+
+.block-1 {
+  border-radius: 4px;
+  border: 1px solid #666;
+}
+
+.block-2 {
+  margin-left: -30px;
+  border-radius: 4px;
+  border: 1px solid #666;
 }
 
 .disabled {
