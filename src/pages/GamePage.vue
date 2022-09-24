@@ -149,6 +149,10 @@ onMounted(() => {
 .level-block {
   position: absolute;
   border-radius: 5px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .random-board {
@@ -192,7 +196,7 @@ onMounted(() => {
   /* transform: translate(0, -15%) rotate(-4deg); */
   /* transform-origin: center center; */
   box-shadow: 2px 2px 2px 2px hsl(130, 30%, 72%);
-  background: hsl(20, 30%, 94%);
+  background: hsl(47, 52%, 91%);
   text-align: center;
   vertical-align: top;
   border-radius: 5px;
@@ -204,6 +208,10 @@ onMounted(() => {
 .block-1 {
   border-radius: 4px;
   border: 1px solid #666;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .block-2 {
@@ -213,7 +221,7 @@ onMounted(() => {
 }
 
 .disabled {
-  background: #d0cec8;
+  background: hsl(262, 0%, 70%);
   cursor: not-allowed;
 }
 </style>
