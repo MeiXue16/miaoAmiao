@@ -7,7 +7,7 @@
     <!-- 胜利 -->
     <a-row align="center">
       <div v-if="gameStatus === 3" style="text-align: center">
-        <h2>恭喜，你赢啦！🎉</h2>
+        <h2>恭喜，你通关啦！🎉</h2>
         <img alt="" src="../assets/kunkun.gif" />
         <!-- <my-ad style="margin-top: 16px" /> -->
       </div>
@@ -32,6 +32,7 @@
           >
             {{ block.type }}
           </div>
+          <audio ref="audio" src="../assets/musics/bo.wav"></audio>
         </div>
       </div>
     </a-row>
@@ -89,6 +90,18 @@ import useGame from "../core/game";
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import MyAd from "../components/MyAd.vue";
+// export default {
+//   data() {
+//     return {
+//       bo: require("../assets/musics/bo.wav"), //声音文件
+//     };
+//   },
+//   methods: {
+//     play() {
+//       this.$refs.audio.play(); //点击触发 点击音效
+//     },
+//   },
+// };
 
 const router = useRouter();
 
@@ -162,8 +175,8 @@ onMounted(() => {
 .skill-board {
   text-align: center;
   border-radius: 5px;
-  padding: 2px 15px;
-  font: 2em;
+  padding: 5px 15px;
+  /* font: 2em; */
 }
 
 .block {
@@ -188,7 +201,7 @@ onMounted(() => {
 }
 
 .block-2 {
-  margin-left: -30px;
+  margin-left: -22px;
   border-radius: 4px;
   border: 1px solid #666;
 }

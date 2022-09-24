@@ -25,12 +25,17 @@
     <!-- </a-button> -->
     <a-button
       block
-      style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;"
+      style="
+        width: 120px;
+        height: 50px;
+        margin-bottom: 32px;
+        border-radius: 12px;
+      "
       @click="toGamePage(lunaticGameConfig)"
     >
       地狱模式
     </a-button>
-	<br />
+    <br />
     <!-- <a-button
       block
       style="margin-bottom: 16px"
@@ -40,13 +45,27 @@
     </a-button> -->
     <a-button
       block
-      style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;"
+      style="
+        width: 120px;
+        height: 50px;
+        margin-bottom: 32px;
+        border-radius: 12px;
+      "
       @click="toGamePage(yangGameConfig)"
     >
       羊了个羊模式
     </a-button>
-	<br />
-    <a-button block style="width:120px; height:50px ;margin-bottom: 32px; border-radius: 12px;" @click="() => toGamePage()">
+    <br />
+    <a-button
+      block
+      style="
+        width: 120px;
+        height: 50px;
+        margin-bottom: 32px;
+        border-radius: 12px;
+      "
+      @click="() => toGamePage()"
+    >
       自定义 🔥
     </a-button>
     <my-ad />

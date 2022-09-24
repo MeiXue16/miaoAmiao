@@ -231,7 +231,8 @@ const useGame = () => {
       let newPosY;
       let key;
       while (true) {
-        newPosX = Math.floor(Math.random() * maxX );
+		var j= 0;
+        newPosX = Math.floor(Math.random() * (maxX) );
         newPosY = Math.floor(Math.random() * maxY);
         key = newPosX + "," + newPosY;
         // 同批次元素不能完全重叠
@@ -335,6 +336,7 @@ const useGame = () => {
         map[type]++;
       }
     });
+	
     console.log("tempSlotAreaVal", tempSlotAreaVal);
     console.log("map", map);
     // 得到新数组
@@ -347,6 +349,7 @@ const useGame = () => {
         slotBlock.status = 2;
         // 已消除块数 +1
         clearBlockNum.value++;
+		
         // 清除操作记录，防止撤回
         opHistory = [];
         return;
@@ -365,6 +368,8 @@ const useGame = () => {
     if (clearBlockNum.value >= totalBlockNum.value) {
       gameStatus.value = 3;
     }
+	
+	
   };
 
   /**
