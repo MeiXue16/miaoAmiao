@@ -6,102 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>喵了个喵</title>
 		<!-- <embed src="src/assets/musics/1.mp3" hidden="true" autostart="true" loop="true"> -->
-		<!-- <div class="video_exist play_yinfu" id="audio_btn" style="display: block;z-index:999999; position: absolute;">
-			<div id="yinfu" class="rotate"></div>
-			<audio preload="auto" autoplay="autoplay" id="audio" controls="controls" src="./src/assets/musics/2.mp3" loop="loop"></audio>
-		</div> -->
-		<div class="page-promotion flex-col">
+		
+		
+		<!-- <div class="page-promotion flex-col">
 		    <div class="con-play flex" @click="audioPlayOrPause()">
-		      <!-- <img v-show="playFlag" class="audio-on" src="../assets/img/promotion/ic_sound_on.svg" alt="">
+		       <img v-show="playFlag" class="audio-on" src="../assets/img/promotion/ic_sound_on.svg" alt="">
 		      <img v-show="!playFlag" class="audio-off" src="../assets/img/promotion/ic_sound_off.svg" alt=""> -->
-		    </div>
-		    
+		    <!-- </div>
 		    <audio ref="audio" src="./src/assets/musics/2.mp3" autoplay loop preload="auto"></audio>
-		</div>
-	<script type="text/javascript" src="./src/assets/musics/auto-music.js"></script>
+		</div> -->
 	<!-- 微信上进入页面是会自动播放的 其它浏览器打开需要触碰一下页面任意地方才会播放 -->
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id: "JonPnywkOzKkLXdw",ck: "JonPnywkOzKkLXdw"})</script>
-	
-	<script>
-	  export default {
-	    name: 'Promotion',
-	    data () {
-	      return {
-	        playFlag: true,
-	        clickMusicBtn: false,
-	      }
-	    },
-	    
-	    async mounted () {
-	      this.audioAutoPlay()
-	      document.addEventListener("visibilitychange", (e) => { // 兼容ios微信手Q
-	        if (this.clickMusicBtn) { // 点击了关闭音乐按钮
-	          if (this.playFlag) {
-	            this.audioAutoPlay();
-	            this.playFlag = true;
-	          } else {
-	            this.audioPause();
-	            this.playFlag = false;
-	          }
-	      
-	          text.innerHTML = e.hidden;
-	          if (e.hidden) {  // 网页被挂起
-	            this.audioAutoPlay();
-	            this.playFlag = true;
-	          } else { // 网页被呼起
-	            this.audioPause();
-	            this.playFlag = false;
-	          }
-	        } else { // 未点击关闭音乐按钮
-	          if (this.playFlag) {
-	            this.audioPause();
-	            this.playFlag = false;
-	          } else {
-	            this.audioAutoPlay();
-	            this.playFlag = true;
-	          }
-	      
-	          text.innerHTML = e.hidden;
-	          if (e.hidden) {  // 网页被挂起
-	            this.audioPause();
-	            this.playFlag = false;
-	          } else { // 网页被呼起
-	            this.audioAutoPlay();
-	            this.playFlag = true;
-	          }
-	        }
-	      });
-	    },
-	    
-	    methods: {
-	      audioPlayOrPause() {
-	        this.clickMusicBtn = !this.clickMusicBtn;
-	        if (this.playFlag) {
-	          this.audioPause();
-	          this.playFlag = false;
-	        } else {
-	          this.audioAutoPlay();
-	          this.playFlag = true;
-	        }
-	      },
-	      audioPause() {
-	        let audio = this.$refs.audio
-	        audio.pause();
-	        document.addEventListener("WeixinJSBridgeReady", function () {
-	          audio.pause();
-	        }, false);
-	      },
-	      audioAutoPlay() {
-	        let audio = this.$refs.audio
-	        audio.play();
-	        document.addEventListener("WeixinJSBridgeReady", function () {
-	          audio.play();
-	        }, false);
-	      },
-	    },
-	  }
-	</script>
+    <script>LA.init({id: "JonPnywkOzKkLXdw",ck: "JonPnywkOzKkLXdw", autoTrack: true})</script>
+	<script type="text/javascript" src="./src/assets/musics/auto-music.js"></script>
+		<div class="video_exist play_yinfu" id="audio_btn" style="display: block;z-index:999999; position: absolute;">
+			<div id="yinfu" class="rotate"></div>
+			<audio preload="auto" autoplay="autoplay" id="audio" controls="controls" src="./src/assets/musics/2.mp3" loop="loop"></audio>
+		</div>
 	
 	
   </head>

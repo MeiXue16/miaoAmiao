@@ -32,7 +32,7 @@
           >
             {{ block.type }}
           </div>
-          <audio ref="audio" src="../assets/musics/bo.wav"></audio>
+          <!-- <audio ref="audio" src="../assets/musics/bo.wav"></audio> -->
         </div>
       </div>
     </a-row>
@@ -193,6 +193,8 @@ onMounted(() => {
   vertical-align: top;
   border-radius: 5px;
   display: inline-block;
+
+  /* margin: -30px -30px; */
 }
 
 .block-1 {
@@ -201,7 +203,7 @@ onMounted(() => {
 }
 
 .block-2 {
-  margin-left: -22px;
+  margin-left: -40px;
   border-radius: 4px;
   border: 1px solid #666;
 }
