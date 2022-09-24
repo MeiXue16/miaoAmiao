@@ -152,22 +152,25 @@ onMounted(() => {
 }
 
 .random-board {
-  margin: 0 calc(50% - 184px);
+  margin: 0 calc(50% - 154px);
   margin-top: 8px;
   border-radius: 5px;
 }
 
 .random-area {
+  margin: 0 calc(50% - 134px);
   margin-top: 8px;
   border-radius: 5px;
-  margin: 10px 0px;
-  padding: 5px 2px;
+  align-items: center;
+
+  /* padding: 5px 2px; */
 }
 
 .slot-board {
   /* margin-top: 24px; */
   border: 10px solid hsl(196, 51%, 70%);
-  margin: 0 calc(50% - 160px);
+
+  margin: 10px calc(50% - 160px);
   width: fit-content;
   border-radius: 10px;
 }
@@ -176,6 +179,7 @@ onMounted(() => {
   text-align: center;
   border-radius: 5px;
   padding: 5px 15px;
+  /* margin: 20px; */
   /* font: 2em; */
 }
 
@@ -203,7 +207,7 @@ onMounted(() => {
 }
 
 .block-2 {
-  margin-left: -40px;
+  margin-left: -30px;
   border-radius: 4px;
   border: 1px solid #666;
 }
